@@ -1,0 +1,59 @@
+*, *::before, *::after {box-sizing: border-box;}
+
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    background-color: #1e1f23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Backgroud - Button */
+label
+{
+    position: relative;
+    width: 350px;
+    height: 150px;
+    border-radius: 75px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1f23;
+    -webkit-box-shadow: 12px 12px 24px #1a1a1e, -12px -12px 24px #232428;
+    box-shadow: 12px 12px 24px #1a1a1e, -12px -12px 24px #232428;
+
+}
+/* Effect - Button */
+label input{
+    appearance: none;
+}
+label span
+{
+    position: absolute;
+    left: 0;
+    width: 175px;
+    height: 150px;
+    background: url(../assets/img/one.png);
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    transition: 1.5s;
+    transform: rotate(-180deg);
+    transform-origin:75px ;
+    
+}
+label input:checked ~ span
+{
+    left: 199px;
+    background: url(../assets/img/two.png);
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    transform: rotate(360deg);
+    filter:drop-shadow(0 0 50px  rgba(253, 255, 235, 0.8));  
+
+}
